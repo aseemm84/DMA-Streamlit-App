@@ -2,4 +2,3 @@
 Pillow
 openai
 python-dotenv
-os
