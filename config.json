@@ -1,0 +1,6 @@
+{
+    "AZURE_OPENAI_KEY": "5ed2688483514a8c8ffcfc55986022dd",
+    "AZURE_OPENAI_ENDPOINT": "https://aseem-openai-playgroud-may2024.openai.azure.com/",
+    "AZURE_OPENAI_APIVERSION": "2024-05-01-preview",
+    "CHATGPT_MODEL": "llm_text_analytics_model_sep_24"
+}
