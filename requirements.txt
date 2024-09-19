@@ -1,5 +1,5 @@
 ﻿streamlit
 Pillow
 openai
-dotenv
+python-dotenv
 os
