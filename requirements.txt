@@ -2,3 +2,5 @@
 Pillow
 openai
 python-dotenv
+transformers
+torch
