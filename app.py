@@ -1,6 +1,6 @@
 import streamlit as st
 from PIL import Image
-from transformers import pipeline
+from transformers import AutoModelForSequenceClassification, AutoTokenizer, pipeline
 import back_app as bk
 
 toxicity_detector = pipeline("text-classification", model="unitary/toxic-bert")
