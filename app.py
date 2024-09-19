@@ -1,8 +1,9 @@
 import streamlit as st
 from PIL import Image
+from transformers import pipeline
 import back_app as bk
 
-
+toxicity_detector = pipeline("text-classification", model="unitary/toxic-bert")
 st.set_page_config(page_title="Social Media Post Generator", page_icon="📱", layout="wide")
 
 col1, col2 = st.columns([1, 4])
@@ -26,8 +27,14 @@ if submitted:
     if product_name and product_type and organization_name and target_audience and product_features and social_platform:
         with st.spinner("Generating post..."):
             generated_post = bk.generate_post(product_name, product_type, organization_name, target_audience, product_features, social_platform)
+        toxicity_result = toxicity_detector(generated_post)
+        toxicity_score = toxicity_result[0]['score']
         st.subheader("Generated Post:")
         st.write(generated_post)
+        st.subheader("Toxicity Detection:")
+        st.write(f"Toxicity Score: {toxicity_score:.2f}")
+        if toxicity_score > 0.5:
+            st.warning("The generated post may contain toxic content. Please review.")
     else:
         st.error("Please fill in all fields before generating a post.")
 
