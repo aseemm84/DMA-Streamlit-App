@@ -25,7 +25,7 @@ def get_llm(temperature):
     return ChatGroq(
         model="llama-3.1-70b-versatile",
         groq_api_key=groq,
-        temperature=0,
+        temperature=temperature,
         max_tokens = 1000
         # other params...
     )
@@ -53,7 +53,7 @@ def generate_post(product_name, product_type, organization_name, target_audience
     Write in a friendly and enthusiastic yet professional tone that best suits the specified audience and platform.
     The length of the post should suit the specified platform.
     """
-    llm = get_llm(temperature)
+    llm = get_llm(temperature = 0)
     prompt = ChatPromptTemplate.from_template(template)
     chain = prompt | llm
     # conversation = [
