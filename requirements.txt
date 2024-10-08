@@ -1,6 +1,10 @@
-﻿streamlit
-Pillow
-openai
+streamlit
+cohere
 python-dotenv
-transformers
-torch
+PyPDF2
+Pillow
+langchain-groq
+langchain-core
+langchain
+google-generativeai
+langchain-community
