@@ -65,6 +65,7 @@ def generate_post(product_name, product_type, organization_name, target_audience
         response = chain.invoke({
             "product_name": product_name,
             "product_type": product_type,
+            "organization_name": organization_name,
             "target_audience": target_audience,
             "product_features": product_features,
             "social_platform": social_platform
