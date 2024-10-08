@@ -8,3 +8,4 @@ langchain-core
 langchain
 google-generativeai
 langchain-community
+transformers
